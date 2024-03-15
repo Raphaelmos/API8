@@ -12,3 +12,4 @@ Ideas :
 - particles
 - smooth transitions
 - Maybe a camera follow of a ball shattering glasses and dominos
+- Dominos falls 
