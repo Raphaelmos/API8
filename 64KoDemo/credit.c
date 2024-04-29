@@ -15,7 +15,7 @@ static void resize(int width, int height);
 static void draw(void);
 static void sortie(void);
 
-static int _fontSize = 128;
+static int _fontSize = 68;
 static GLuint _quadId = 0;
 static GLuint _pId = 0;
 static GLuint _texId[1] = { 0 };

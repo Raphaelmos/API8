@@ -53,6 +53,23 @@ void strip(int state) {
     }
 }
 
+void rowling(int state) {
+    static float time = 0.0;
+    static GLuint _pId = 0, _quadId = 0;
+    static Uint32 lastTime = 0;
+    switch (state) {
+    case GL4DH_INIT:
+        _pId = gl4duCreateProgram("<vs>shaders/basic.vs", "<fs>shaders/rowling.fs", NULL);
+        _quadId = gl4dgGenQuadf();
+        break;
+    case GL4DH_FREE: gl4dgDelete(_quadId); gl4duClean(GL4DU_ALL); break;
+    case GL4DH_DRAW:
+        run_shaders(_pId, _quadId, &time, 1.5f, &lastTime);
+        break;
+    }
+}
+
+
 
 
 void transition_fondu(void (* a0)(int), void (* a1)(int), Uint32 t, Uint32 et, int state) {
@@ -232,6 +249,7 @@ void bleu(int state) {
     /* INITIALISEZ VOTRE ANIMATION (SES VARIABLES <STATIC>s) */
     return;
   case GL4DH_FREE:
+  gl4dpDeleteScreen();
     /* LIBERER LA MEMOIRE UTILISEE PAR LES <STATIC>s */
     return;
   case GL4DH_UPDATE_WITH_AUDIO:

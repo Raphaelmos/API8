@@ -19,6 +19,7 @@
 extern "C" {
 #endif
   extern void strip(int state);
+  extern void rowling(int state);
   extern void fondu(void (* a0)(int), void (* a1)(int), Uint32 t, Uint32 et, int state);
   extern void rouge(int state);
   extern void vert(int state);
@@ -28,6 +29,7 @@ extern "C" {
   extern void dancing_cubes(int state);
   extern void transition_fondu(void (* a0)(int), void (* a1)(int), Uint32 t, Uint32 et, int state);
   extern void credit_fin(int state);
+  extern void julia(int state);
 
 #ifdef __cplusplus
 }
