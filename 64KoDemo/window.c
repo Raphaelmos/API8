@@ -26,35 +26,20 @@ static void keydown(int keycode);
 /*!\brief tableau contenant les animations sous la forme de timeline,
  * ce tableau se termine toujours par l'élémént {0, NULL, NULL,
  * NULL} */
-//static GL4DHanime _animations[] = {
+static GL4DHanime _animations[] = {
   //{ 5000, transition_fondu, NULL, NULL },
   //{ 5000, rouge, NULL, NULL },
-  //{ 2000, rouge, vert, fondu },
+   { 1000, rouge, vert, fondu },
+   { 1000, vert, bleu, fondu },
+   { 1000, vert, rouge, fondu },
   //{ 5000, vert, NULL, NULL },
   //{ 2000, vert, dancing_cubes, fondu },
   //{ 5000, dancing_cubes, NULL, NULL },
   //{ 2000, dancing_cubes, bleu, fondu },
   //{ 5000, bleu, NULL, NULL },
-  //{ 9500, strip, NULL, transition_fondu },
-  //{ 9500, strip, NULL, NULL },
-  //{ 5000, credit_fin, NULL, NULL },
-  //{ 9500, strip, NULL, transition_fondu },
- // {    0, NULL, NULL, NULL } /* Toujours laisser à la fin */
-//};
-
-static GL4DHanime _animations[] = {
-  { 5000, transition_fondu, NULL, NULL },
-  { 9500, strip, NULL, NULL },
-  { 2000, rouge, vert, fondu },
-  { 5000, vert, NULL, NULL },
-  { 2000, vert, dancing_cubes, fondu },
-  { 5000, dancing_cubes, NULL, NULL },
-  { 2000, dancing_cubes, bleu, fondu },
-  { 5000, bleu, NULL, NULL },
-  { 5000, julia, NULL, NULL },
   { 9500, strip, NULL, transition_fondu },
-  { 9500, rowling, NULL, transition_fondu },
-  { 9500, strip, NULL, NULL },
+  { 7500, animation_mendel, NULL, NULL },
+  { 9500, rowling, NULL, NULL },
   { 5000, credit_fin, NULL, NULL },
   { 9500, strip, NULL, transition_fondu },
   {    0, NULL, NULL, NULL } /* Toujours laisser à la fin */
@@ -78,7 +63,7 @@ int main(int argc, char ** argv) {
   gl4duwKeyDownFunc(keydown);
   gl4duwDisplayFunc(gl4dhDraw);
 
-  ahInitAudio("takeonme.mod");
+  ahInitAudio("takeonme.mid");
   gl4duwMainLoop();
   return 0;
 }

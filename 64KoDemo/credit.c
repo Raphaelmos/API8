@@ -15,7 +15,7 @@ static void resize(int width, int height);
 static void draw(void);
 static void sortie(void);
 
-static int _fontSize = 68;
+static int _fontSize = 126;
 static GLuint _quadId = 0;
 static GLuint _pId = 0;
 static GLuint _texId[1] = { 0 };
@@ -29,7 +29,7 @@ void credit_fin(int state) {
     /* INITIALISEZ VOTRE ANIMATION (SES VARIABLES <STATIC>s) */
     _texte = "\n                    Credits . . .             \n\n"
 	   "    - Musique: \n    freemidi.org\n\n"
-       "   - Démo réaliser par Raphaël MOSCATELLI \n\n"
+       "   - Demo realiser par Raphael MOSCATELLI \n\n"
        	   "    - Font/Texte: \n    Alagard -- dafont.com\n\n"
 	   "    - Code provenant de : \n  M.Fares BELHADJ, amsi@up8.edu\n";
     init();

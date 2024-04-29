@@ -1,0 +1,1 @@
+Images / Documentation / dancing_cubes ne sont pas utilisé donc pas nécessaire au calcul de la taille

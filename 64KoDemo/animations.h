@@ -18,6 +18,16 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+  typedef struct{
+  double x;
+  double y;
+  }point;
+
+  #define MAX_STEPS 500000
+
+  void mendel(int max);
+  void mendel_anim();
+  extern void animation_mendel(int state);
   extern void strip(int state);
   extern void rowling(int state);
   extern void fondu(void (* a0)(int), void (* a1)(int), Uint32 t, Uint32 et, int state);
@@ -29,7 +39,6 @@ extern "C" {
   extern void dancing_cubes(int state);
   extern void transition_fondu(void (* a0)(int), void (* a1)(int), Uint32 t, Uint32 et, int state);
   extern void credit_fin(int state);
-  extern void julia(int state);
 
 #ifdef __cplusplus
 }

@@ -6,8 +6,6 @@
 #include <GL4D/gl4dg.h>
 #include <GL4D/gl4dp.h>
 #include <GL4D/gl4dh.h>
-#include <assert.h>
-
 
 static void init(void);
 static void draw(void);
@@ -85,9 +83,9 @@ void init(void) {
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
   /* on récupère une image depuis SDL/BMP */
   SDL_Surface * s = SDL_LoadBMP("images/A.bmp");
-  assert(s);
+  //assert(s);
   /* je sais que mon images est RGB */
-  assert(s->format->BytesPerPixel == 3);
+  //assert(s->format->BytesPerPixel == 3);
   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, s->w, s->h, 0, GL_RGB, GL_UNSIGNED_BYTE, s->pixels);
   SDL_FreeSurface(s);
 
@@ -98,9 +96,9 @@ void init(void) {
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
   /* on récupère une image depuis SDL/BMP */
   s = SDL_LoadBMP("images/B.bmp");
-  assert(s);
+  //assert(s);
   /* je sais que mon images est RGBA */
-  assert(s->format->BytesPerPixel == 4);
+  //assert(s->format->BytesPerPixel == 4);
   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, s->w, s->h, 0, GL_RGBA, GL_UNSIGNED_BYTE, s->pixels);
   SDL_FreeSurface(s);
 
