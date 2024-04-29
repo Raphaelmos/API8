@@ -13,7 +13,7 @@ static void quit( void );
 
 /*!\brief opened window width */
 /*!\brief opened window height */
-static GLfloat _dim = {1024, 768}
+static GLfloat _dim[] = {1024, 768};
 /*!\brief identifiant du GLSL program */
 static GLuint _pId = 0;
 static GLuint _quad = 0;
