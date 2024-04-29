@@ -6,6 +6,8 @@
 #include <GL4D/gl4dg.h>
 #include <GL4D/gl4dp.h>
 #include <GL4D/gl4dh.h>
+#include <assert.h>
+
 
 static void init(void);
 static void draw(void);
